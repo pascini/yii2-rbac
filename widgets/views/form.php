@@ -3,13 +3,13 @@
 /*
  * This file is part of the Dektrium project
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-use dektrium\rbac\models\Assignment;
+use pascini\rbac\models\Assignment;
 use kartik\select2\Select2;
 use yii\bootstrap4\Alert;
 use yii\helpers\Html;

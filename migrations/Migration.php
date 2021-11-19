@@ -3,15 +3,15 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/pascini/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac\migrations;
+namespace pascini\rbac\migrations;
 
-use dektrium\rbac\components\DbManager;
+use pascini\rbac\components\DbManager;
 use yii\base\Component;
 use yii\db\MigrationInterface;
 use yii\di\Instance;
@@ -277,7 +277,7 @@ class Migration extends Component implements MigrationInterface
 
     /**
      * Adds child.
-     * 
+     *
      * @param Item|string $parent Either name or Item instance which is parent
      * @param Item|string $child  Either name or Item instance which is child
      */
@@ -391,7 +391,7 @@ class Migration extends Component implements MigrationInterface
 
         $this->authManager->update($ruleName, $rule);
         echo ' done (time: ' . sprintf('%.3f', microtime(true) - $time) . "s)\n";
-        
+
         return $rule;
     }
 }

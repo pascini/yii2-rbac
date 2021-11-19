@@ -3,13 +3,13 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac\widgets;
+namespace pascini\rbac\widgets;
 
 use yii\bootstrap4\Nav;
 
@@ -34,7 +34,7 @@ class Menu extends Nav
     {
         parent::init();
 
-        $userModuleClass       = 'dektrium\user\Module';
+        $userModuleClass       = 'pascini\user\Module';
         $isUserModuleInstalled = \Yii::$app->getModule('user') instanceof $userModuleClass;
 
         $this->items = [

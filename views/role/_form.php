@@ -3,7 +3,7 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
 
 /**
  * @var $this  yii\web\View
- * @var $model dektrium\rbac\models\Role
+ * @var $model pascini\rbac\models\Role
  */
 
 use kartik\select2\Select2;

@@ -3,17 +3,17 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac\controllers;
+namespace pascini\rbac\controllers;
 
-use dektrium\rbac\components\DbManager;
-use dektrium\rbac\models\Rule;
-use dektrium\rbac\models\RuleSearch;
+use pascini\rbac\components\DbManager;
+use pascini\rbac\models\Rule;
+use pascini\rbac\models\RuleSearch;
 use yii\di\Instance;
 use yii\filters\VerbFilter;
 use yii\web\Controller;
@@ -60,7 +60,7 @@ class RuleController extends Controller
 
     /**
      * Shows list of created rules.
-     * 
+     *
      * @return string
      * @throws \yii\base\InvalidConfigException
      */
@@ -68,7 +68,7 @@ class RuleController extends Controller
     {
         $searchModel  = $this->getSearchModel();
         $dataProvider = $searchModel->search(\Yii::$app->request->queryParams);
-        
+
         return $this->render('index', [
             'searchModel'  => $searchModel,
             'dataProvider' => $dataProvider,
@@ -77,7 +77,7 @@ class RuleController extends Controller
 
     /**
      * Shows page where new rule can be added.
-     * 
+     *
      * @return array|string
      */
     public function actionCreate()

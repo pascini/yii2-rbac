@@ -3,15 +3,15 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac\controllers;
+namespace pascini\rbac\controllers;
 
-use dektrium\rbac\models\Assignment;
+use pascini\rbac\models\Assignment;
 use Yii;
 use yii\web\Controller;
 
@@ -22,7 +22,7 @@ class AssignmentController extends Controller
 {
     /**
      * Show form with auth items for user.
-     * 
+     *
      * @param int $id
      */
     public function actionAssign($id)
@@ -31,22 +31,22 @@ class AssignmentController extends Controller
             'class'   => Assignment::className(),
             'user_id' => $id,
         ]);
-        
+
         if ($model->load(\Yii::$app->request->post()) && $model->updateAssignments()) {
         }
 
-        return \dektrium\rbac\widgets\Assignments::widget([
+        return \pascini\rbac\widgets\Assignments::widget([
             'model' => $model,
         ]);
         /*$model = Yii::createObject([
             'class'   => Assignment::className(),
             'user_id' => $id,
         ]);
-        
+
         if ($model->load(Yii::$app->request->post()) && $model->updateAssignments()) {
-            
+
         }
-        
+
         return $this->render('assign', [
             'model' => $model,
         ]);*/

@@ -3,14 +3,14 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/pascini/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
 
-namespace dektrium\rbac\commands;
+namespace pascini\rbac\commands;
 
 use yii\console\controllers\BaseMigrateController;
 use yii\db\Connection;
@@ -45,7 +45,7 @@ class MigrateController extends BaseMigrateController
     /**
      * @inheritdoc
      */
-    public $templateFile = '@dektrium/rbac/views/migration.php';
+    public $templateFile = '@pascini/rbac/views/migration.php';
 
     /**
      * @inheritdoc

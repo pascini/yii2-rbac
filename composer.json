@@ -1,12 +1,12 @@
 {
   "name": "pascini/yii2-rbac",
   "description": "RBAC management module for Yii2",
-  "keywords": ["yii2", "yii2-rbac", "rbac management", "dektrium", "rbac gui", "yii rbac", "rbac module"],
+  "keywords": ["yii2", "yii2-rbac", "rbac management", "pascini", "rbac gui", "yii rbac", "rbac module"],
   "type": "yii2-extension",
   "license": "MIT",
   "support": {
-    "issues": "https://github.com/dektrium/yii2-rbac/issues?state=open",
-    "source": "https://github.com/dektrium/yii2-rbac"
+    "issues": "https://github.com/pascini/yii2-rbac/issues?state=open",
+    "source": "https://github.com/pascini/yii2-rbac"
   },
   "authors": [
     {
@@ -22,11 +22,11 @@
   },
   "autoload": {
     "psr-4": {
-      "dektrium\\rbac\\": ""
+      "pascini\\rbac\\": ""
     }
   },
   "extra": {
-    "bootstrap": "dektrium\\rbac\\Bootstrap",
+    "bootstrap": "pascini\\rbac\\Bootstrap",
     "branch-alias": {
       "dev-master": "1.0.x-dev"
     }

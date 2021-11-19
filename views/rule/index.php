@@ -3,7 +3,7 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
@@ -11,7 +11,7 @@
 
 /**
  * @var $this         \yii\web\View
- * @var $searchModel  \dektrium\rbac\models\RuleSearch
+ * @var $searchModel  \pascini\rbac\models\RuleSearch
  * @var $dataProvider \yii\data\ArrayDataProvider
  */
 
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 
-<?php $this->beginContent('@dektrium/rbac/views/layout.php') ?>
+<?php $this->beginContent('@pascini/rbac/views/layout.php') ?>
 
 <?php Pjax::begin() ?>
 
@@ -55,7 +55,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'data'     => new JsExpression('function(params) { return {q:params.term}; }')
                     ],
                     'allowClear' => true,
-                    
+
                 ],
             ]),
         ],

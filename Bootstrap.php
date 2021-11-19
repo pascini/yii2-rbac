@@ -3,17 +3,17 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/pascini/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac;
+namespace pascini\rbac;
 
-use dektrium\rbac\components\DbManager;
-use dektrium\rbac\components\ManagerInterface;
-use dektrium\user\Module as UserModule;
+use pascini\rbac\components\DbManager;
+use pascini\rbac\components\ManagerInterface;
+use pascini\user\Module as UserModule;
 use yii\base\Application;
 use yii\web\Application as WebApplication;
 use yii\base\BootstrapInterface;
@@ -50,15 +50,15 @@ class Bootstrap implements BootstrapInterface
                 throw new InvalidConfigException('You have wrong authManager configuration');
             }
 
-            // if dektrium/user extension is installed, copy admin list from there
+            // if pascini/user extension is installed, copy admin list from there
             if ($this->checkUserModuleInstalled($app) && $app instanceof WebApplication) {
                 $app->getModule('rbac')->admins = $app->getModule('user')->admins;
-            }   
+            }
         }
     }
-    
+
     /**
-     * Verifies that dektrium/yii2-rbac is installed and configured.
+     * Verifies that pascini/yii2-rbac is installed and configured.
      * @param  Application $app
      * @return bool
      */
@@ -70,9 +70,9 @@ class Bootstrap implements BootstrapInterface
             return $app->hasModule('rbac') && $app->getModule('rbac') instanceof RbacConsoleModule;
         }
     }
-    
+
     /**
-     * Verifies that dektrium/yii2-user is installed and configured.
+     * Verifies that pascini/yii2-user is installed and configured.
      * @param  Application $app
      * @return bool
      */
@@ -80,7 +80,7 @@ class Bootstrap implements BootstrapInterface
     {
         return $app->hasModule('user') && $app->getModule('user') instanceof UserModule;
     }
-    
+
     /**
      * Verifies that authManager component is configured.
      * @param  Application $app

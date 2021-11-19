@@ -3,7 +3,7 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
+ * (c) Dektrium project <http://github.com/pascini/>
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -16,19 +16,19 @@
 echo "<?php\n";
 ?>
 
-use dektrium\rbac\migrations\Migration;
+use pascini\rbac\migrations\Migration;
 
 class <?= $className ?> extends Migration
 {
     public function safeUp()
     {
-    
+
     }
-    
+
     public function safeDown()
     {
         echo "<?= $className ?> cannot be reverted.\n";
-        
+
         return false;
     }
 }

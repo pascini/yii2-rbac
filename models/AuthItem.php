@@ -3,20 +3,20 @@
 /*
  * This file is part of the Dektrium project.
  *
- * (c) Dektrium project <http://github.com/dektrium>
+ * (c) Dektrium project <http://github.com/pascini>
  *
  * For the full copyright and license information, please view the LICENSE.md
  * file that was distributed with this source code.
  */
 
-namespace dektrium\rbac\models;
+namespace pascini\rbac\models;
 
 use yii\base\InvalidConfigException;
 use yii\base\InvalidParamException;
 use yii\base\Model;
 use yii\helpers\Json;
 use yii\rbac\Item;
-use dektrium\rbac\validators\RbacValidator;
+use pascini\rbac\validators\RbacValidator;
 
 /**
  * @author Dmitry Erofeev <dmeroff@gmail.com>
@@ -59,7 +59,7 @@ abstract class AuthItem extends Model
     public $item;
 
     /**
-     * @var \dektrium\rbac\components\DbManager
+     * @var \pascini\rbac\components\DbManager
      */
     protected $manager;
 
@@ -169,7 +169,7 @@ abstract class AuthItem extends Model
         $this->item->description = $this->description;
         $this->item->data        = $this->data == null ? null : Json::decode($this->data);
         $this->item->ruleName    = empty($this->rule) ? null : $this->rule;
-  
+
         if ($isNewItem) {
             \Yii::$app->session->setFlash('success', \Yii::t('rbac', 'Item has been created'));
             $this->manager->add($this->item);
