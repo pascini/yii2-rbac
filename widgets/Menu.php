@@ -11,7 +11,7 @@
 
 namespace dektrium\rbac\widgets;
 
-use yii\bootstrap\Nav;
+use yii\bootstrap4\Nav;
 
 /**
  * Menu widget.
